@@ -4,7 +4,7 @@
   "description": "edume predictive text backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node src/server.js",
     "start": "babel-node src/server.js"
   },
   "author": "Bassel Al-Sayed",
@@ -16,6 +16,10 @@
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "@babel/register": "^7.15.3",
+    "camb-dict": "^1.0.0",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
