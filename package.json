@@ -1,13 +1,13 @@
 {
   "name": "edume-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "edume predictive text backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node src/server.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Bassel Al-Sayed",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.15.0",
