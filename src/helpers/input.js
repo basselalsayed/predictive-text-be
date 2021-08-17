@@ -21,3 +21,13 @@ const getLettersArrays = numbers => {
 
   return [];
 };
+
+export const getPossibleInputs = digits =>
+  digits
+    .map(getLettersArrays)
+    .filter(Boolean)
+    .reduce((current, next) =>
+      current.flatMap(currentLetter =>
+        next.map(nextLetter => currentLetter + nextLetter),
+      ),
+    );
