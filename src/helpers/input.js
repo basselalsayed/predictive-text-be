@@ -8,3 +8,16 @@ const inputs = [
   ['t', 'u', 'v'],
   ['w', 'x', 'y', 'z'],
 ];
+
+const getLettersArrays = numbers => {
+  const getInput = n => inputs[n - 2];
+
+  if (typeof numbers === 'number') {
+    return getInput(numbers);
+  }
+  if (Array.isArray(numbers)) {
+    return numbers.map(getInput);
+  }
+
+  return [];
+};
