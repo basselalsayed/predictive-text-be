@@ -3,6 +3,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import handleErrors from './middleware/handleErrors';
 
 const app = express();
 
@@ -31,3 +32,5 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+app.use(handleErrors);
