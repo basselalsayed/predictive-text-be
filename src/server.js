@@ -34,3 +34,13 @@ app.use((req, res, next) => {
 });
 
 app.use(handleErrors);
+
+const port = process.env.PORT || 5000;
+
+app.listen(
+  port,
+  console.log(
+    '\x1b[36m\n[server]\x1b[0m',
+    `\x1b[33mListening on port ${port}\n\x1b[0m`,
+  ),
+);
