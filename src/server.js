@@ -3,6 +3,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import digitsRoute from './routes/digits';
 import handleErrors from './middleware/handleErrors';
 
 const app = express();
@@ -32,6 +33,8 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+app.use('/digits', digitsRoute);
 
 app.use(handleErrors);
 
