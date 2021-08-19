@@ -2,7 +2,7 @@ import { red, yellow } from 'chalk';
 import { GeneralError } from '../utils/Error';
 import { send } from '../helpers';
 
-const handleErrors = (error, { method, params, url }, res) => {
+const handleErrors = (error, { method, params, url }, res, next) => {
   console.log(red(new Date(Date.now())));
   console.log(red('[Error]:'), yellow(error));
   console.log(red('[Request URL]:'), yellow(url));
